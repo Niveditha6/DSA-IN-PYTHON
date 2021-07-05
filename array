@@ -1,0 +1,81 @@
+import array as arr
+
+a=arr.array('i',[1,2,3,4])
+b=arr.array('d',[5,6,7,8])
+
+#DISPLAY OPERATION
+for i in range(0,4):
+    print(a[i],i)
+for j in range(0,4):
+    print(b[j],j)
+print("*************")
+'''INSERTION OPERATION
+   insert using insert method, takes two parameter , first one is the index where insertion should takes place ,second is the value to be inserted'''
+a.insert(2,7)
+a.insert(1,6)
+b.insert(1,1)
+b.insert(2,8)
+print("After insertion using insert method array elements are:")
+for i in range(len(a)):
+    print(a[i])
+for j in range(len(b)):
+    print(b[j])
+print("*************")
+
+''' inserting elements using append method, append method is used to attach a given value at the end of an array'''
+
+a.append(10)
+b.append(10.0)
+print("After insertion using append method array elements are:")
+for i in range(len(a)):
+    print(a[i])
+for j in range(len(b)):
+    print(b[j])
+print("*************")
+
+'''DELETION OPERATION
+   Deletion operation using remove method, it removes the first ocurance of given value as a parameter'''
+a.remove(10)
+b.remove(10.0)
+print("After removal of elements using remove method :")
+for i in range(len(a)):
+    print(a[i])
+for j in range(len(b)):
+    print(b[j])
+print("*************")
+'''Deletion operation using pop method, this will remove the value from the specified index which is passes as an argument ,if not it removes the last element of an array and returns it'''
+c=a.pop(0)
+print("removed value from array is",c)
+d=b.pop()
+print("the last element of array b is ",d ,"and is being removed")
+
+'''UPDATION OPERATION
+we can update the value of an array by simple index'''
+
+a[0]=5
+b[0]=5.5
+print("After updation the arrays :")
+for i in range(len(a)):
+    print(a[i])
+for j in range(len(b)):
+    print(b[j])
+print("*************")
+
+'''SEARCHING OPERATION
+ we can search elements of an array usiing index method which returns the index of first occurance of value provided as parameter'''
+print("Indexes of values we are searching for are:")
+print(a.index(7))
+print(b.index(7.0))
+print("************")
+
+
+'''SLICING OPERATION
+we can obtain a sub array from the given array using slice operation []'''
+print("the elements of array a from index 1 to 3 are:",a[1:4])
+print("the elements of array a from start to end are:",a[ : ])
+print("the elements of array b from start to 3  are:",b[ : 4])
+print("the elements of array b from 1 to end are:", b[ 1: ])
+print("the elements of array a in reverse order :", a[ : :-1])
+print("the elements of array a from start to end with stepsize 2 : " , a[ : : 3])
+print(a[ : -3])
+''' this prints elements from -3 to rest of the elements in an array'''
